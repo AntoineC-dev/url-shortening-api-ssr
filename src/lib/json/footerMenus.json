@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Features",
+    "links": [
+      { "label": "Link Shortening", "href": "/" },
+      { "label": "Branded Links", "href": "/" },
+      { "label": "Analytics", "href": "/" }
+    ]
+  },
+  {
+    "title": "Resources",
+    "links": [
+      { "label": "Blog", "href": "/" },
+      { "label": "Developers", "href": "/" },
+      { "label": "Support", "href": "/" }
+    ]
+  },
+  {
+    "title": "Company",
+    "links": [
+      { "label": "About", "href": "/" },
+      { "label": "Our Team", "href": "/" },
+      { "label": "Careers", "href": "/" },
+      { "label": "Contact", "href": "/" }
+    ]
+  }
+]

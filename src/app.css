@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply h-full min-h-screen antialiased;
+  }
+
+  html,
+  body,
+  #app-container {
+    @apply flex flex-col;
+  }
+
+  body,
+  #app-container {
+    @apply grow;
+  }
+
+  #app-container {
+    @apply isolate bg-white text-neutral-400 overflow-x-hidden;
+  }
+
+  .section {
+    @apply px-6 sm:px-10 lg:px-14;
+  }
+
+  .container-xl {
+    @apply max-w-screen-xl mx-auto;
+  }
+
+  .h1 {
+    @apply text-4xl xs:text-5xl md:text-clamp-h1 font-bold;
+  }
+
+  .h2 {
+    @apply text-2xl xs:text-3xl md:text-clamp-h2 font-bold;
+  }
+
+  input[data-invalid="true"] {
+    @apply outline outline-error;
+  }
+}
+
+@layer components {
+  .statistics-line {
+    @apply relative before:bg-primary before:block before:absolute before:top-0 lg:before:top-1/2 before:left-1/2 lg:before:left-0 before:h-full lg:before:h-[6px] before:-translate-x-1/2 lg:before:translate-x-0 lg:before:-translate-y-1/2  before:w-[6px] lg:before:w-full;
+  }
+
+  .bg-shorten {
+    @apply bg-[url('/images/bg-shorten-mobile.svg')] sm:bg-[url('/images/bg-shorten-desktop.svg')] bg-no-repeat bg-right-top sm:bg-cover;
+  }
+
+  .bg-boost {
+    @apply bg-[url('/images/bg-boost-mobile.svg')] sm:bg-[url('/images/bg-boost-desktop.svg')] bg-no-repeat bg-cover;
+  }
+
+  /** Buttons **/
+
+  .btn {
+    @apply leading-none font-bold whitespace-nowrap px-8 py-4 disabled:cursor-not-allowed rounded-3xl;
+  }
+
+  .btn-sm {
+    @apply leading-none font-bold whitespace-nowrap px-6 py-3 disabled:cursor-not-allowed rounded-3xl;
+  }
+
+  .btn-lg {
+    @apply leading-none font-bold whitespace-nowrap px-8 py-4 disabled:cursor-not-allowed rounded-3xl text-lg;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary hover:enabled:brightness-110 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply text-white bg-secondary hover:enabled:brightness-110 transition-all duration-300;
+  }
+
+  .btn-text {
+    @apply text-neutral-200 hover:enabled:text-neutral-300 transition-colors duration-300;
+  }
+}
