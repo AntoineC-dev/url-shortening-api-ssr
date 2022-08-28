@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { menuItems } from "$lib/json";
-  import { trapFocus } from "$lib/actions";
+  import { trapFocus, clickOutside } from "$lib/actions";
   import { user, loginUser, logoutUser } from "$lib/stores";
 
   let open = false;
@@ -26,6 +26,7 @@
 
 <nav
   use:trapFocus={{ shouldTrap: open, toggleElement: hamburger, closeCallback: toggle }}
+  use:clickOutside={{ shouldListen: open, callback: toggle }}
   aria-label="Primary"
   class="md:hidden ml-auto"
 >
@@ -37,9 +38,9 @@
     aria-controls="menu-items"
     class="flex flex-col justify-center items-center gap-[6px] p-1 -mx-1 text-neutral-200"
   >
-    <div bind:this={top} class="w-[26px] h-[3px] bg-current transition-transform duration-300 ease-in-out" />
-    <div bind:this={middle} class="w-[26px] h-[3px] bg-current transition-opacity duration-300 ease-in-out" />
-    <div bind:this={bottom} class="w-[26px] h-[3px] bg-current transition-transform duration-300 ease-in-out" />
+    <span bind:this={top} class="w-[26px] h-[3px] bg-current transition-transform duration-300 ease-in-out" />
+    <span bind:this={middle} class="w-[26px] h-[3px] bg-current transition-opacity duration-300 ease-in-out" />
+    <span bind:this={bottom} class="w-[26px] h-[3px] bg-current transition-transform duration-300 ease-in-out" />
   </button>
   <div
     id="menu-items"
