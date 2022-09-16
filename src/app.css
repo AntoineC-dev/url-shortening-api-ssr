@@ -39,7 +39,7 @@
     @apply text-2xl xs:text-3xl md:text-clamp-h2 font-bold;
   }
 
-  input[data-invalid="true"] {
+  input[data-invalid='true'] {
     @apply outline outline-error;
   }
 }
